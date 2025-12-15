@@ -3,17 +3,93 @@
 /* Tailwind v4 single import */
 @import "tailwindcss";
 
+/* Enable View Transitions API */
+@view-transition {
+  navigation: auto;
+}
+
+:root {
+  --md-sys-color-primary: #006492;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #cae6ff;
+  --md-sys-color-on-primary-container: #001e30;
+  --md-sys-color-secondary: #50606e;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #d3e5f5;
+  --md-sys-color-on-secondary-container: #0c1d29;
+  --md-sys-color-tertiary: #65587b;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #ebddff;
+  --md-sys-color-on-tertiary-container: #201634;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+  --md-sys-color-background: #fcfcff;
+  --md-sys-color-on-background: #1a1c1e;
+  --md-sys-color-surface: #fcfcff;
+  --md-sys-color-on-surface: #1a1c1e;
+  --md-sys-color-surface-variant: #dee3eb;
+  --md-sys-color-on-surface-variant: #42474e;
+  --md-sys-color-outline: #72777f;
+}
+
+:root.dark {
+  --md-sys-color-primary: #8bcdff;
+  --md-sys-color-on-primary: #00344f;
+  --md-sys-color-primary-container: #004b70;
+  --md-sys-color-on-primary-container: #cae6ff;
+  --md-sys-color-secondary: #b7c9d9;
+  --md-sys-color-on-secondary: #22323f;
+  --md-sys-color-secondary-container: #384956;
+  --md-sys-color-on-secondary-container: #d3e5f5;
+  --md-sys-color-tertiary: #cfbdfe;
+  --md-sys-color-on-tertiary: #36274f;
+  --md-sys-color-tertiary-container: #4d3f66;
+  --md-sys-color-on-tertiary-container: #ebddff;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-background: #1a1c1e;
+  --md-sys-color-on-background: #e2e2e5;
+  --md-sys-color-surface: #1a1c1e;
+  --md-sys-color-on-surface: #e2e2e5;
+  --md-sys-color-surface-variant: #42474e;
+  --md-sys-color-on-surface-variant: #c2c7cf;
+  --md-sys-color-outline: #8c9199;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f8f9fa; /* Google's off-white background */
-  color: #202124; /* Google's text color */
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Material Design Utilities */
 .btn-primary {
-  @apply bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all active:shadow-sm;
+  @apply bg-[#006492] text-white hover:bg-[#004b70] shadow-md transition-all active:shadow-sm rounded-full px-6 py-2 font-medium;
 }
 
 .card-nav {
-  @apply hover:bg-gray-100 rounded-full transition-colors;
+  @apply hover:bg-[#cae6ff] text-[#001e30] rounded-full transition-colors font-medium;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 6s ease infinite;
 }
