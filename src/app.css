@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* Tailwind v4 single import */
+@import "tailwindcss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa; /* Google's off-white background */
+  color: #202124; /* Google's text color */
+}
+
+/* Material Design Utilities */
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all active:shadow-sm;
+}
+
+.card-nav {
+  @apply hover:bg-gray-100 rounded-full transition-colors;
+}

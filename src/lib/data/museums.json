@@ -1,0 +1,352 @@
+[
+    {
+        "id": 1,
+        "name": "National Museum",
+        "location": "New Delhi",
+        "features": [
+            "Harappan Civilization Gallery",
+            "Maurya Art",
+            "Bronze Gallery",
+            "Manuscripts",
+            "Coins"
+        ],
+        "description": "One of the largest museums in India, holding a variety of articles ranging from pre-historic era to modern works of art.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/National_Museum%2C_New_Delhi.jpg/1200px-National_Museum%2C_New_Delhi.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Indian Museum",
+        "location": "Kolkata",
+        "features": [
+            "Bharhut Gallery",
+            "Bird Gallery",
+            "Coin Gallery",
+            "Gandarva Gallery",
+            "Mask Gallery"
+        ],
+        "description": "The ninth oldest museum of the world, offering a unique collection of armour, antiques, ornaments, skeletons, fossils, mummies, and Mughal paintings.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Indian_Museum_Kolkata.jpg/1200px-Indian_Museum_Kolkata.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+        "location": "Mumbai",
+        "features": [
+            "Indus Valley Civilization Artifacts",
+            "Miniature Paintings",
+            "Sculptures",
+            "Natural History Section",
+            "Japanese Art"
+        ],
+        "description": "Formerly known as the Prince of Wales Museum of Western India, it functions as a gateway to Indian culture.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Chhatrapati_Shivaji_Maharaj_Vastu_Sangrahalaya.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Salar Jung Museum",
+        "location": "Hyderabad",
+        "features": [
+            "Veiled Rebecca",
+            "Jade Room",
+            "Clock Room",
+            "Qurans",
+            "Ivory Carvings"
+        ],
+        "description": "One of the three National Museums of India, it holds a collection of sculptures, paintings, carvings, textiles, manuscripts, ceramics, metallic artifacts, carpets, clocks, and furniture.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Salar_Jung_Museum_Hyderabad.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Victoria Memorial",
+        "location": "Kolkata",
+        "features": [
+            "Royal Gallery",
+            "Calcutta Gallery",
+            "Queen Victoria's Piano",
+            "Oil Paintings",
+            "Arms and Armour"
+        ],
+        "description": "A large marble building in Kolkata, which was built between 1906 and 1921. It is dedicated to the memory of Queen Victoria.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Victoria_Memorial_Kolkata_Night.jpg/1200px-Victoria_Memorial_Kolkata_Night.jpg"
+    },
+    {
+        "id": 6,
+        "name": "National Rail Museum",
+        "location": "New Delhi",
+        "features": [
+            "Fairy Queen Engine",
+            "Saloon of Prince of Wales",
+            "Fire Engine",
+            "Electric Locomotive 4502",
+            "Steam Simulator"
+        ],
+        "description": "Focuses on the rail heritage of India. It opened on 1 February 1977.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/National_Rail_Museum.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Calico Museum of Textiles",
+        "location": "Ahmedabad",
+        "features": [
+            "Kashmiri Shawls",
+            "Mughal Tents",
+            "Tie and Dye Fabrics",
+            "Religious Textiles",
+            "Costumes"
+        ],
+        "description": "The museum is managed by the Sarabhai Foundation and is one of the most celebrated institutes of textiles in the country.",
+        "image": "https://lh5.googleusercontent.com/p/AF1QipN3N3N3N3N3N3N3N3N3N3N3N3N3N3N3N3N3"
+    },
+    {
+        "id": 8,
+        "name": "Dr. Bhau Daji Lad Museum",
+        "location": "Mumbai",
+        "features": [
+            "Maps of Mumbai",
+            "Dioramas",
+            "Clay Models",
+            "Costumes",
+            "Industrial Arts"
+        ],
+        "description": "The oldest museum in Mumbai, essentially displaying the city's cultural heritage and history.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Bhau_Daji_Lad_Museum.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Napier Museum",
+        "location": "Thiruvananthapuram",
+        "features": [
+            "Bronze Idols",
+            "Kathakali Models",
+            "Temple Carriages",
+            "Ivory Carvings",
+            "Stone Sculptures"
+        ],
+        "description": "An art and natural history museum built in the 19th century.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Napier_Museum_Thiruvananthapuram.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Shankar's International Dolls Museum",
+        "location": "New Delhi",
+        "features": [
+            "Japanese Dolls",
+            "Costume Dolls",
+            "Indian Dolls",
+            "Flamenco Dancers",
+            "Kabuki Dancers"
+        ],
+        "description": "A large collection of dolls from across the globe.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Dolls_Museum.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Government Museum",
+        "location": "Chennai",
+        "features": [
+            "Bronze Gallery",
+            "Amaravati Gallery",
+            "National Art Gallery",
+            "Children's Museum",
+            "Botany Gallery"
+        ],
+        "description": "Also known as the Madras Museum, it is the second oldest museum in India.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Government_Museum_Chennai.jpg"
+    },
+    {
+        "id": 12,
+        "name": "DakshinaChitra",
+        "location": "Chennai",
+        "features": [
+            "Heritage Houses",
+            "Textiles",
+            "Folk Arts",
+            "Crafts",
+            "Performances"
+        ],
+        "description": "A living-history museum dedicated to South Indian heritage and culture.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/DakshinaChitra_Entrance.jpg/1200px-DakshinaChitra_Entrance.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Partition Museum",
+        "location": "Amritsar",
+        "features": [
+            "Oral Histories",
+            "Personal Artifacts",
+            "Documents",
+            "Refugee Camp Tent",
+            "Well of Remembrance"
+        ],
+        "description": "A public museum located in the Town Hall of Amritsar, dedicated to the memory of the Partition of India.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Partition_Museum.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Vintage & Classic Car Collection",
+        "location": "Udaipur",
+        "features": [
+            "Rolls-Royce Phantom",
+            "Cadillacs",
+            "Convertibles",
+            "Horse-drawn Carriages",
+            "Solar Rickshaws"
+        ],
+        "description": "A museum displaying the vintage car collection of the Maharanas of Udaipur.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Vintage_Car_Museum_Udaipur.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Heritage Transport Museum",
+        "location": "Gurgaon",
+        "features": [
+            "Pre-mechanised Transport",
+            "Automobile Gallery",
+            "Railways",
+            "Aviation",
+            "Maritime Gallery"
+        ],
+        "description": "Major museum dealing with the history of human transportation.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Heritage_Transport_Museum.jpg"
+    },
+    {
+        "id": 16,
+        "name": "HAL Aerospace Museum",
+        "location": "Bangalore",
+        "features": [
+            "Aircraft Display",
+            "Helicopters",
+            "Engine Models",
+            "Flight Simulator",
+            "ATC Tower"
+        ],
+        "description": "India's first aerospace museum located at Hindustan Aeronautics Limited premises.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/HAL_Heritage_Centre_and_Aerospace_Museum.jpg/1200px-HAL_Heritage_Centre_and_Aerospace_Museum.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Visvesvaraya Industrial and Technological Museum",
+        "location": "Bangalore",
+        "features": [
+            "Engine Hall",
+            "Electrotechnic Gallery",
+            "Fun Science",
+            "Space Gallery",
+            "Biotechnology"
+        ],
+        "description": "A constituent unit of the National Council of Science Museums, dedicated to science and technology.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Visvesvaraya_Industrial_and_Technological_Museum.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Jawahar Toy Museum",
+        "location": "Pondicherry",
+        "features": [
+            "Dolls from Punjab",
+            "Dolls from Bengal",
+            "Dolls from Gujarat",
+            "Fairyland",
+            "Traditional Costumes"
+        ],
+        "description": "Features a wide collection of dolls from different states of India.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Pondicherry_Museum.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Kite Museum",
+        "location": "Ahmedabad",
+        "features": [
+            "Mirror Work Kites",
+            "Block Print Kites",
+            "Japanese Kites",
+            "History of Kites",
+            "Miniature Kites"
+        ],
+        "description": "Part of the Sanskar Kendra, it houses an extraordinary collection of kites.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/archive/f/f6/20120202150937%21Sanskar_Kendra.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Sulabh International Museum of Toilets",
+        "location": "New Delhi",
+        "features": [
+            "Ancient Toilets",
+            "Medieval Toilets",
+            "Modern Toilets",
+            "Sanitation Technology",
+            "Social History"
+        ],
+        "description": "Dedicated to the global history of sanitation and toilets.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Sulabh_International_Museum_of_Toilets.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Mayong Central Museum and Emporium",
+        "location": "Mayong",
+        "features": [
+            "Black Magic Manuscripts",
+            "Ancient Relics",
+            "Masks",
+            "Swords",
+            "Jewelry"
+        ],
+        "description": "Located in the 'Land of Black Magic', displaying artifacts related to magic and sorcery.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/placeholder.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Naval Aviation Museum",
+        "location": "Goa",
+        "features": [
+            "Vintage Aircraft",
+            "Armament",
+            "Safety Equipment",
+            "Archives",
+            "Engine Room"
+        ],
+        "description": "A military aviation museum located in Bogmalo, Goa.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Naval_Aviation_Museum_Goa.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Don Bosco Center for Indigenous Cultures",
+        "location": "Shillong",
+        "features": [
+            "Skywalk",
+            "Agricultural Gallery",
+            "Art Gallery",
+            "Costumes Gallery",
+            "Musical Instruments"
+        ],
+        "description": "A major museum of the indigenous cultures of Northeast India.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Don_Bosco_Museum.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Island Museum",
+        "location": "Nagarjunakonda",
+        "features": [
+            "Buddhist Relics",
+            "Stone Tools",
+            "Inscriptions",
+            "Sculptures",
+            "Jewellery"
+        ],
+        "description": "Situated on an island in the Nagarjuna Sagar Dam, holding Buddhist artifacts.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Nagarjunakonda_Museum.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Tribal Museum",
+        "location": "Bhopal",
+        "features": [
+            "Tribal Houses",
+            "Ritual Artifacts",
+            "Tools",
+            "Musical Instruments",
+            "Paintings"
+        ],
+        "description": "Showcases the rich tribal culture and heritage of Madhya Pradesh.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Tribal_Museum_Bhopal.jpg"
+    }
+]

@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "e31ada4d-9ca4-4dbd-8223-cfae813ad869",
+      "username": "PriyanshuMahala",
+      "passwordHash": "priyanshu*babu@@5027*100"
+    },
+    {
+      "id": "d57e8428-a8fc-45c2-b5e5-325d334022d7",
+      "username": "admin",
+      "passwordHash": "123"
+    }
+  ],
+  "reviews": [
+    {
+      "museumId": 3,
+      "userId": "e31ada4d-9ca4-4dbd-8223-cfae813ad869",
+      "username": "PriyanshuMahala",
+      "rating": 4,
+      "comment": "didnt like it",
+      "id": "9a51dd3d-096c-4b8e-8e8f-0939d17079a4",
+      "createdAt": "2025-12-15T17:49:06.264Z"
+    },
+    {
+      "museumId": 3,
+      "userId": "d57e8428-a8fc-45c2-b5e5-325d334022d7",
+      "username": "admin",
+      "rating": 3,
+      "comment": "Good",
+      "id": "7f6ba9b4-ec4c-4568-b0e9-6a827557f658",
+      "createdAt": "2025-12-15T17:49:37.531Z"
+    }
+  ],
+  "wishlists": [
+    {
+      "userId": "e31ada4d-9ca4-4dbd-8223-cfae813ad869",
+      "museumIds": [
+        3
+      ]
+    },
+    {
+      "userId": "d57e8428-a8fc-45c2-b5e5-325d334022d7",
+      "museumIds": [
+        3
+      ]
+    }
+  ]
+}
