@@ -8,7 +8,7 @@
 >
     <div class="mb-10 scale-110">
         <h1
-            class="text-[5.5rem] font-bold tracking-tighter leading-none select-none bg-gradient-to-r from-[var(--md-sys-color-primary)] via-[var(--md-sys-color-tertiary)] to-[var(--md-sys-color-primary)] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
+            class="text-6xl md:text-8xl font-bold tracking-tighter leading-none select-none bg-gradient-to-r from-[var(--md-sys-color-primary)] via-[var(--md-sys-color-tertiary)] to-[var(--md-sys-color-primary)] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
         >
             DigiMuseum
         </h1>

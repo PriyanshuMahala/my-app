@@ -48,149 +48,158 @@
 <div
   class="min-h-screen bg-[var(--md-sys-color-background)] text-[var(--md-sys-color-on-background)] font-sans selection:bg-[var(--md-sys-color-primary-container)] selection:text-[var(--md-sys-color-on-primary-container)] transition-colors duration-300"
 >
-  <nav
-    class="sticky top-0 z-50 bg-[var(--md-sys-color-surface)]/95 backdrop-blur-md px-6 py-4 flex items-center justify-between transition-all duration-300"
+  <!-- Floating Navbar Island -->
+  <div
+    class="fixed top-4 left-0 right-0 z-50 px-4 flex justify-center pointer-events-none"
   >
-    <div class="flex items-center gap-2">
-      <button
-        onclick={toggleMobileMenu}
-        class="p-3 rounded-full hover:bg-[var(--md-sys-color-surface-variant)] transition-colors text-[var(--md-sys-color-on-surface)] md:hidden focus:outline-none"
-        aria-label="Toggle menu"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-8 h-8"
+    <nav
+      class="w-full max-w-4xl bg-[var(--md-sys-color-surface-container-high)]/80 backdrop-blur-xl shadow-lg border border-[var(--md-sys-color-outline)]/10 rounded-full px-2 pl-6 py-2 flex items-center justify-between pointer-events-auto transition-all duration-300 hover:shadow-xl hover:bg-[var(--md-sys-color-surface-container-high)]/95"
+    >
+      <div class="flex items-center gap-2">
+        <button
+          onclick={toggleMobileMenu}
+          class="p-2 rounded-full hover:bg-[var(--md-sys-color-on-surface)]/10 transition-colors text-[var(--md-sys-color-on-surface)] md:hidden focus:outline-none"
+          aria-label="Toggle menu"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-      </button>
-      <a
-        href="/"
-        class="flex items-center gap-2 px-2"
-        onclick={closeMobileMenu}
-      >
-        <!-- Modern Material You Logo -->
-        <span
-          class="text-[24px] font-medium tracking-tight text-[var(--md-sys-color-on-surface)]"
-        >
-          Digital<span class="font-bold text-[var(--md-sys-color-primary)]"
-            >Museum</span
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
           >
-        </span>
-      </a>
-    </div>
-
-    <div class="flex items-center gap-2 md:gap-4">
-      <div
-        class="hidden md:flex items-center gap-1 bg-[var(--md-sys-color-surface-variant)]/30 p-1.5 rounded-full"
-      >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
         <a
           href="/"
-          class="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300"
-          class:bg-[var(--md-sys-color-secondary-container)]={$page.url
-            .pathname === "/"}
-          class:text-[var(--md-sys-color-on-secondary-container)]={$page.url
-            .pathname === "/"}
-          class:text-[var(--md-sys-color-on-surface-variant)]={$page.url
-            .pathname !== "/"}
-          class:hover:bg-[var(--md-sys-color-surface-variant)]={$page.url
-            .pathname !== "/"}>Home</a
+          class="flex items-center gap-2 pr-4"
+          onclick={closeMobileMenu}
         >
-        <a
-          href="/museums"
-          class="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300"
-          class:bg-[var(--md-sys-color-secondary-container)]={$page.url.pathname.startsWith(
-            "/museums",
-          )}
-          class:text-[var(--md-sys-color-on-secondary-container)]={$page.url.pathname.startsWith(
-            "/museums",
-          )}
-          class:text-[var(--md-sys-color-on-surface-variant)]={!$page.url.pathname.startsWith(
-            "/museums",
-          )}
-          class:hover:bg-[var(--md-sys-color-surface-variant)]={!$page.url.pathname.startsWith(
-            "/museums",
-          )}>Museums</a
-        >
-        <a
-          href="/quiz"
-          class="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300"
-          class:bg-[var(--md-sys-color-secondary-container)]={$page.url
-            .pathname === "/quiz"}
-          class:text-[var(--md-sys-color-on-secondary-container)]={$page.url
-            .pathname === "/quiz"}
-          class:text-[var(--md-sys-color-on-surface-variant)]={$page.url
-            .pathname !== "/quiz"}
-          class:hover:bg-[var(--md-sys-color-surface-variant)]={$page.url
-            .pathname !== "/quiz"}>Quiz</a
-        >
+          <span
+            class="text-xl font-bold tracking-tight text-[var(--md-sys-color-on-surface)]"
+          >
+            Digi<span class="text-[var(--md-sys-color-primary)]">Museum</span>
+          </span>
+        </a>
       </div>
 
-      <button
-        onclick={toggleDarkMode}
-        class="p-2.5 rounded-full hover:bg-[var(--md-sys-color-surface-variant)] transition-colors text-[var(--md-sys-color-on-surface-variant)]"
-        aria-label="Toggle Dark Mode"
-      >
-        {#if isDarkMode}
-          <!-- Sun Icon -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5"
+      <div class="flex items-center gap-1">
+        <div class="hidden md:flex items-center gap-1 mr-2">
+          <a
+            href="/"
+            class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 relative overflow-hidden group"
+            class:text-[var(--md-sys-color-on-surface)]={$page.url.pathname !==
+              "/"}
+            class:font-bold={$page.url.pathname === "/"}
+            class:text-[var(--md-sys-color-primary)]={$page.url.pathname ===
+              "/"}
+            class:bg-[var(--md-sys-color-primary-container)]={$page.url
+              .pathname === "/"}
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-            />
-          </svg>
-        {:else}
-          <!-- Moon Icon -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5"
+            <div
+              class="absolute inset-0 bg-[var(--md-sys-color-on-surface)]/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            Home
+          </a>
+          <a
+            href="/museums"
+            class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 relative overflow-hidden group"
+            class:text-[var(--md-sys-color-on-surface)]={!$page.url.pathname.startsWith(
+              "/museums",
+            )}
+            class:font-bold={$page.url.pathname.startsWith("/museums")}
+            class:text-[var(--md-sys-color-primary)]={$page.url.pathname.startsWith(
+              "/museums",
+            )}
+            class:bg-[var(--md-sys-color-primary-container)]={$page.url.pathname.startsWith(
+              "/museums",
+            )}
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-            />
-          </svg>
-        {/if}
-      </button>
+            <div
+              class="absolute inset-0 bg-[var(--md-sys-color-on-surface)]/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            Museums
+          </a>
+          <a
+            href="/quiz"
+            class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 relative overflow-hidden group"
+            class:text-[var(--md-sys-color-on-surface)]={$page.url.pathname !==
+              "/quiz"}
+            class:font-bold={$page.url.pathname === "/quiz"}
+            class:text-[var(--md-sys-color-primary)]={$page.url.pathname ===
+              "/quiz"}
+            class:bg-[var(--md-sys-color-primary-container)]={$page.url
+              .pathname === "/quiz"}
+          >
+            <div
+              class="absolute inset-0 bg-[var(--md-sys-color-on-surface)]/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            Quiz
+          </a>
+        </div>
 
-      {#if user}
-        <a
-          href="/dashboard"
-          class="flex items-center justify-center h-10 w-10 rounded-full bg-[var(--md-sys-color-primary)] text-[var(--md-sys-color-on-primary)] font-bold shadow-md hover:ring-2 hover:ring-[var(--md-sys-color-primary-container)] transition-all"
-          title="Dashboard"
+        <button
+          onclick={toggleDarkMode}
+          class="p-2.5 rounded-full hover:bg-[var(--md-sys-color-on-surface)]/10 transition-colors text-[var(--md-sys-color-on-surface-variant)]"
+          aria-label="Toggle Dark Mode"
         >
-          {user.username.charAt(0).toUpperCase()}
-        </a>
-      {:else}
-        <a
-          href="/login"
-          class="bg-[var(--md-sys-color-primary)] hover:bg-[var(--md-sys-color-primary)]/90 text-[var(--md-sys-color-on-primary)] px-6 py-2.5 rounded-full font-medium text-sm shadow-md transition-all hover:shadow-lg"
-          >Sign in</a
-        >
-      {/if}
-    </div>
-  </nav>
+          {#if isDarkMode}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+              />
+            </svg>
+          {:else}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+              />
+            </svg>
+          {/if}
+        </button>
+
+        {#if user}
+          <a
+            href="/dashboard"
+            class="flex items-center justify-center h-10 w-10 ml-2 rounded-full bg-[var(--md-sys-color-primary)] text-[var(--md-sys-color-on-primary)] font-bold shadow-sm hover:ring-2 hover:ring-[var(--md-sys-color-primary-container)] transition-all"
+            title="Dashboard"
+          >
+            {user.username.charAt(0).toUpperCase()}
+          </a>
+        {:else}
+          <a
+            href="/login"
+            class="ml-2 bg-[var(--md-sys-color-primary)] hover:bg-[var(--md-sys-color-primary)]/90 text-[var(--md-sys-color-on-primary)] px-5 py-2 rounded-full font-medium text-sm shadow-sm transition-all hover:shadow-md whitespace-nowrap"
+            >Sign in</a
+          >
+        {/if}
+      </div>
+    </nav>
+  </div>
 
   <!-- Mobile Menu Drawer -->
   {#if isMobileMenuOpen}
@@ -309,7 +318,7 @@
     </div>
   {/if}
 
-  <main class="max-w-[1280px] mx-auto px-4 sm:px-6 py-8">
+  <main class="max-w-[1280px] mx-auto px-4 sm:px-6 pt-24 pb-12">
     {@render children()}
   </main>
 </div>
