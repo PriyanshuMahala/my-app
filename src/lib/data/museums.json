@@ -3,6 +3,7 @@
         "id": 1,
         "name": "National Museum",
         "location": "New Delhi",
+        "region": "North",
         "features": [
             "Harappan Civilization Gallery",
             "Maurya Art",
@@ -17,6 +18,7 @@
         "id": 2,
         "name": "Indian Museum",
         "location": "Kolkata",
+        "region": "East",
         "features": [
             "Bharhut Gallery",
             "Bird Gallery",
@@ -31,6 +33,7 @@
         "id": 3,
         "name": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
         "location": "Mumbai",
+        "region": "West",
         "features": [
             "Indus Valley Civilization Artifacts",
             "Miniature Paintings",
@@ -45,6 +48,7 @@
         "id": 4,
         "name": "Salar Jung Museum",
         "location": "Hyderabad",
+        "region": "South",
         "features": [
             "Veiled Rebecca",
             "Jade Room",
@@ -59,6 +63,7 @@
         "id": 5,
         "name": "Victoria Memorial",
         "location": "Kolkata",
+        "region": "East",
         "features": [
             "Royal Gallery",
             "Calcutta Gallery",
@@ -73,6 +78,7 @@
         "id": 6,
         "name": "National Rail Museum",
         "location": "New Delhi",
+        "region": "North",
         "features": [
             "Fairy Queen Engine",
             "Saloon of Prince of Wales",
@@ -87,6 +93,7 @@
         "id": 7,
         "name": "Calico Museum of Textiles",
         "location": "Ahmedabad",
+        "region": "West",
         "features": [
             "Kashmiri Shawls",
             "Mughal Tents",
@@ -101,6 +108,7 @@
         "id": 8,
         "name": "Dr. Bhau Daji Lad Museum",
         "location": "Mumbai",
+        "region": "West",
         "features": [
             "Maps of Mumbai",
             "Dioramas",
@@ -115,6 +123,7 @@
         "id": 9,
         "name": "Napier Museum",
         "location": "Thiruvananthapuram",
+        "region": "South",
         "features": [
             "Bronze Idols",
             "Kathakali Models",
@@ -129,6 +138,7 @@
         "id": 10,
         "name": "Shankar's International Dolls Museum",
         "location": "New Delhi",
+        "region": "North",
         "features": [
             "Japanese Dolls",
             "Costume Dolls",
@@ -143,6 +153,7 @@
         "id": 11,
         "name": "Government Museum",
         "location": "Chennai",
+        "region": "South",
         "features": [
             "Bronze Gallery",
             "Amaravati Gallery",
@@ -157,6 +168,7 @@
         "id": 12,
         "name": "DakshinaChitra",
         "location": "Chennai",
+        "region": "South",
         "features": [
             "Heritage Houses",
             "Textiles",
@@ -171,6 +183,7 @@
         "id": 13,
         "name": "Partition Museum",
         "location": "Amritsar",
+        "region": "North",
         "features": [
             "Oral Histories",
             "Personal Artifacts",
@@ -185,6 +198,7 @@
         "id": 14,
         "name": "Vintage & Classic Car Collection",
         "location": "Udaipur",
+        "region": "North",
         "features": [
             "Rolls-Royce Phantom",
             "Cadillacs",
@@ -199,6 +213,7 @@
         "id": 15,
         "name": "Heritage Transport Museum",
         "location": "Gurgaon",
+        "region": "North",
         "features": [
             "Pre-mechanised Transport",
             "Automobile Gallery",
@@ -213,6 +228,7 @@
         "id": 16,
         "name": "HAL Aerospace Museum",
         "location": "Bangalore",
+        "region": "South",
         "features": [
             "Aircraft Display",
             "Helicopters",
@@ -227,6 +243,7 @@
         "id": 17,
         "name": "Visvesvaraya Industrial and Technological Museum",
         "location": "Bangalore",
+        "region": "South",
         "features": [
             "Engine Hall",
             "Electrotechnic Gallery",
@@ -241,6 +258,7 @@
         "id": 18,
         "name": "Jawahar Toy Museum",
         "location": "Pondicherry",
+        "region": "South",
         "features": [
             "Dolls from Punjab",
             "Dolls from Bengal",
@@ -255,6 +273,7 @@
         "id": 19,
         "name": "Kite Museum",
         "location": "Ahmedabad",
+        "region": "West",
         "features": [
             "Mirror Work Kites",
             "Block Print Kites",
@@ -269,6 +288,7 @@
         "id": 20,
         "name": "Sulabh International Museum of Toilets",
         "location": "New Delhi",
+        "region": "North",
         "features": [
             "Ancient Toilets",
             "Medieval Toilets",
@@ -283,6 +303,7 @@
         "id": 21,
         "name": "Mayong Central Museum and Emporium",
         "location": "Mayong",
+        "region": "North East",
         "features": [
             "Black Magic Manuscripts",
             "Ancient Relics",
@@ -297,6 +318,7 @@
         "id": 22,
         "name": "Naval Aviation Museum",
         "location": "Goa",
+        "region": "West",
         "features": [
             "Vintage Aircraft",
             "Armament",
@@ -311,6 +333,7 @@
         "id": 23,
         "name": "Don Bosco Center for Indigenous Cultures",
         "location": "Shillong",
+        "region": "North East",
         "features": [
             "Skywalk",
             "Agricultural Gallery",
@@ -325,6 +348,7 @@
         "id": 24,
         "name": "Island Museum",
         "location": "Nagarjunakonda",
+        "region": "South",
         "features": [
             "Buddhist Relics",
             "Stone Tools",
@@ -339,6 +363,7 @@
         "id": 25,
         "name": "Tribal Museum",
         "location": "Bhopal",
+        "region": "Central",
         "features": [
             "Tribal Houses",
             "Ritual Artifacts",

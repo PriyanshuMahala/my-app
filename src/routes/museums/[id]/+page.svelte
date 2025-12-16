@@ -1,32 +1,66 @@
 <script lang="ts">
     import { enhance } from "$app/forms";
     import { fade, fly } from "svelte/transition";
-    let { data } = $props();
+    import AudioGuide from "$lib/components/AudioGuide.svelte";
 
-    let museum = $derived(data.museum);
-    let reviews = $derived(data.reviews);
-    let isWishlisted = $derived(data.isWishlisted);
-    let user = $derived(data.user);
+    let { data, form } = $props();
+    let { museum, reviews, isWishlisted, user } = $derived(data);
+    let submitting = $state(false);
+
+    // Entrance animation
+    let visible = $state(false);
+    $effect(() => {
+        visible = true;
+    });
 </script>
 
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-12" in:fade>
-    <!-- Left Column: Image and Actions -->
-    <div class="lg:col-span-1 space-y-8">
+<div class="min-h-screen pb-20">
+    <!-- Hero Section with Parallax-like effect -->
+    <div class="relative h-[60vh] lg:h-[70vh] w-full overflow-hidden">
         <div
-            class="rounded-[32px] overflow-hidden shadow-lg bg-[var(--md-sys-color-surface)] border border-[var(--md-sys-color-outline)]/20"
-            in:fly={{ y: 20, duration: 500 }}
+            class="absolute inset-0 bg-gradient-to-t from-[var(--md-sys-color-background)] to-transparent z-10"
+        ></div>
+        <img
+            src={museum.image}
+            alt={museum.name}
+            class="w-full h-full object-cover"
+        />
+        <div
+            class="absolute bottom-0 left-0 right-0 z-20 p-6 md:p-12 max-w-7xl mx-auto"
         >
-            <img
-                src={museum.image}
-                alt={museum.name}
-                class="w-full h-80 object-cover"
-            />
-            <div class="p-6">
+            <div
+                class="flex flex-col md:flex-row items-end justify-between gap-6"
+                in:fly={{ y: 50, duration: 800 }}
+            >
+                <div>
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-[var(--md-sys-color-primary)] text-[var(--md-sys-color-on-primary)] text-sm font-medium mb-4 shadow-lg backdrop-blur-md bg-opacity-90"
+                    >
+                        {museum.location}
+                    </span>
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-bold text-[var(--md-sys-color-on-background)] leading-tight mb-4 drop-shadow-sm"
+                    >
+                        {museum.name}
+                    </h1>
+                    <div class="flex flex-wrap gap-3 mt-4">
+                        {#if museum.region}
+                            <span
+                                class="bg-[var(--md-sys-color-surface-variant)] text-[var(--md-sys-color-on-surface-variant)] px-3 py-1 rounded-md text-sm font-medium"
+                            >
+                                {museum.region} Region
+                            </span>
+                        {/if}
+                        <AudioGuide
+                            text="{museum.name}. {museum.description}. Located in {museum.location}."
+                        />
+                    </div>
+                </div>
                 {#if user}
                     <form action="?/toggleWishlist" method="POST" use:enhance>
                         <button
                             type="submit"
-                            class="w-full py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all shadow-md active:shadow-sm {isWishlisted
+                            class="w-full md:w-auto px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all shadow-md active:shadow-sm {isWishlisted
                                 ? 'bg-[var(--md-sys-color-error-container)] text-[var(--md-sys-color-on-error-container)] hover:bg-[var(--md-sys-color-error-container)]/80'
                                 : 'bg-[var(--md-sys-color-primary)] hover:bg-[var(--md-sys-color-primary)]/90 text-[var(--md-sys-color-on-primary)]'}"
                         >

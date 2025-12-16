@@ -2,6 +2,7 @@ export interface Museum {
     id: number;
     name: string;
     location: string;
+    region?: string;
     features: string[];
     description: string;
     image: string;

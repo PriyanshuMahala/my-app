@@ -127,6 +127,22 @@
             Museums
           </a>
           <a
+            href="/explore"
+            class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 relative overflow-hidden group"
+            class:text-[var(--md-sys-color-on-surface)]={$page.url.pathname !==
+              "/explore"}
+            class:font-bold={$page.url.pathname === "/explore"}
+            class:text-[var(--md-sys-color-primary)]={$page.url.pathname ===
+              "/explore"}
+            class:bg-[var(--md-sys-color-primary-container)]={$page.url
+              .pathname === "/explore"}
+          >
+            <div
+              class="absolute inset-0 bg-[var(--md-sys-color-on-surface)]/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            Explore
+          </a>
+          <a
             href="/quiz"
             class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 relative overflow-hidden group"
             class:text-[var(--md-sys-color-on-surface)]={$page.url.pathname !==
