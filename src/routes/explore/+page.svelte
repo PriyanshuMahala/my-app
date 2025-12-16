@@ -73,74 +73,181 @@
                         stroke-dasharray="4"
                         opacity="0.3"
                     />
-                    <line
-                        x1="80"
-                        y1="180"
-                        x2="150"
-                        y2="180"
-                        stroke="var(--md-sys-color-outline)"
-                        stroke-width="2"
-                        stroke-dasharray="4"
-                        opacity="0.3"
-                    />
-                    <line
-                        x1="150"
-                        y1="180"
-                        x2="150"
-                        y2="280"
-                        stroke="var(--md-sys-color-outline)"
-                        stroke-width="2"
-                        stroke-dasharray="4"
-                        opacity="0.3"
-                    />
-                    <line
-                        x1="280"
-                        y1="100"
-                        x2="240"
-                        y2="160"
-                        stroke="var(--md-sys-color-outline)"
-                        stroke-width="2"
-                        stroke-dasharray="4"
-                        opacity="0.3"
-                    />
-
-                    {#each mapRegions as region}
-                        <!-- Region Node -->
-                        <!-- svelte-ignore a11y_click_events_have_key_events -->
-                        <!-- svelte-ignore a11y_no_static_element_interactions -->
-                        <g
-                            onclick={() => (selectedRegion = region.name)}
-                            class="cursor-pointer transition-all duration-300 hover:scale-110"
-                            class:opacity-50={selectedRegion !== "All" &&
-                                selectedRegion !== region.name}
+                    <!-- Realistic India Map (Simplified Regions) -->
+                    <!-- SVG ViewBox adjusted for India's aspect ratio -->
+                    <svg
+                        viewBox="0 0 600 700"
+                        class="w-full h-full drop-shadow-2xl"
+                    >
+                        <!-- Stylized Background/Ocean -->
+                        <filter
+                            id="glow"
+                            x="-20%"
+                            y="-20%"
+                            width="140%"
+                            height="140%"
                         >
-                            <circle
-                                cx={region.cx}
-                                cy={region.cy}
-                                r={selectedRegion === region.name
-                                    ? region.r + 5
-                                    : region.r}
-                                fill={region.color}
-                                fill-opacity="0.2"
-                                stroke={region.color}
-                                stroke-width="2"
+                            <feGaussianBlur stdDeviation="5" result="blur" />
+                            <feComposite
+                                in="SourceGraphic"
+                                in2="blur"
+                                operator="over"
                             />
-                            <circle
-                                cx={region.cx}
-                                cy={region.cy}
-                                r={selectedRegion === region.name ? 8 : 4}
-                                fill={region.color}
-                            />
-                            <text
-                                x={region.cx}
-                                y={region.cy + region.r + 15}
-                                text-anchor="middle"
-                                class="text-[12px] font-bold fill-[var(--md-sys-color-on-surface)] uppercase tracking-widest"
+                        </filter>
+
+                        <!-- Map Group -->
+                        <g
+                            stroke="var(--md-sys-color-outline)"
+                            stroke-width="1.5"
+                            stroke-linejoin="round"
+                        >
+                            <!-- Northern Region (J&K, Himachal, Punjab, Haryana, Uttarakhand, Delhi, UP) -->
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
+                            <path
+                                d="M230,20 L280,25 L320,60 L350,90 L330,120 L380,150 L350,180 L250,180 L200,150 L180,100 L200,50 Z"
+                                class="cursor-pointer transition-all duration-300 hover:brightness-110"
+                                fill={selectedRegion === "North"
+                                    ? "var(--md-sys-color-primary)"
+                                    : "var(--md-sys-color-surface-container-high)"}
+                                fill-opacity={selectedRegion === "All" ||
+                                selectedRegion === "North"
+                                    ? "0.8"
+                                    : "0.3"}
+                                onclick={() => (selectedRegion = "North")}
                             >
-                                {region.name}
-                            </text>
+                                <title>North India</title>
+                            </path>
+
+                            <!-- Western Region (Rajasthan, Gujarat, Maharashtra, Goa) -->
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
+                            <path
+                                d="M100,200 L180,160 L200,150 L250,180 L250,300 L220,350 L180,320 L120,300 L50,250 L80,220 Z"
+                                class="cursor-pointer transition-all duration-300 hover:brightness-110"
+                                fill={selectedRegion === "West"
+                                    ? "var(--md-sys-color-primary)"
+                                    : "var(--md-sys-color-surface-container-high)"}
+                                fill-opacity={selectedRegion === "All" ||
+                                selectedRegion === "West"
+                                    ? "0.8"
+                                    : "0.3"}
+                                onclick={() => (selectedRegion = "West")}
+                            >
+                                <title>West India</title>
+                            </path>
+
+                            <!-- Central Region (MP, Chhattisgarh) -->
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
+                            <path
+                                d="M250,180 L350,180 L380,250 L350,300 L250,300 L250,180 Z"
+                                class="cursor-pointer transition-all duration-300 hover:brightness-110"
+                                fill={selectedRegion === "Central"
+                                    ? "var(--md-sys-color-primary)"
+                                    : "var(--md-sys-color-surface-container-high)"}
+                                fill-opacity={selectedRegion === "All" ||
+                                selectedRegion === "Central"
+                                    ? "0.8"
+                                    : "0.3"}
+                                onclick={() => (selectedRegion = "Central")}
+                            >
+                                <title>Central India</title>
+                            </path>
+
+                            <!-- Eastern Region (Bihar, Bengal, Odisha, Jharkhand) -->
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
+                            <path
+                                d="M350,180 L420,180 L420,250 L400,300 L350,300 L380,250 Z"
+                                class="cursor-pointer transition-all duration-300 hover:brightness-110"
+                                fill={selectedRegion === "East"
+                                    ? "var(--md-sys-color-primary)"
+                                    : "var(--md-sys-color-surface-container-high)"}
+                                fill-opacity={selectedRegion === "All" ||
+                                selectedRegion === "East"
+                                    ? "0.8"
+                                    : "0.3"}
+                                onclick={() => (selectedRegion = "East")}
+                            >
+                                <title>East India</title>
+                            </path>
+
+                            <!-- North East Region -->
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
+                            <path
+                                d="M420,160 L550,140 L580,180 L520,220 L450,200 L420,180 Z"
+                                class="cursor-pointer transition-all duration-300 hover:brightness-110"
+                                fill={selectedRegion === "North East"
+                                    ? "var(--md-sys-color-primary)"
+                                    : "var(--md-sys-color-surface-container-high)"}
+                                fill-opacity={selectedRegion === "All" ||
+                                selectedRegion === "North East"
+                                    ? "0.8"
+                                    : "0.3"}
+                                onclick={() => (selectedRegion = "North East")}
+                            >
+                                <title>North East India</title>
+                            </path>
+
+                            <!-- Southern Region (Andhra, Karnataka, TN, Kerala) -->
+                            <!-- svelte-ignore a11y_click_events_have_key_events -->
+                            <!-- svelte-ignore a11y_no_static_element_interactions -->
+                            <path
+                                d="M220,350 L250,300 L350,300 L400,300 L380,450 L300,650 L220,450 Z"
+                                class="cursor-pointer transition-all duration-300 hover:brightness-110"
+                                fill={selectedRegion === "South"
+                                    ? "var(--md-sys-color-primary)"
+                                    : "var(--md-sys-color-surface-container-high)"}
+                                fill-opacity={selectedRegion === "All" ||
+                                selectedRegion === "South"
+                                    ? "0.8"
+                                    : "0.3"}
+                                onclick={() => (selectedRegion = "South")}
+                            >
+                                <title>South India</title>
+                            </path>
                         </g>
-                    {/each}
+
+                        <!-- Labels -->
+                        <text
+                            x="280"
+                            y="120"
+                            class="text-xs font-bold fill-[var(--md-sys-color-on-surface)] pointer-events-none opacity-50"
+                            >NORTH</text
+                        >
+                        <text
+                            x="150"
+                            y="250"
+                            class="text-xs font-bold fill-[var(--md-sys-color-on-surface)] pointer-events-none opacity-50"
+                            >WEST</text
+                        >
+                        <text
+                            x="300"
+                            y="250"
+                            class="text-xs font-bold fill-[var(--md-sys-color-on-surface)] pointer-events-none opacity-50"
+                            >CENTRAL</text
+                        >
+                        <text
+                            x="480"
+                            y="180"
+                            class="text-xs font-bold fill-[var(--md-sys-color-on-surface)] pointer-events-none opacity-50"
+                            >NORTH EAST</text
+                        >
+                        <text
+                            x="390"
+                            y="240"
+                            class="text-xs font-bold fill-[var(--md-sys-color-on-surface)] pointer-events-none opacity-50"
+                            >EAST</text
+                        >
+                        <text
+                            x="300"
+                            y="450"
+                            class="text-xs font-bold fill-[var(--md-sys-color-on-surface)] pointer-events-none opacity-50"
+                            >SOUTH</text
+                        >
+                    </svg>
                 </svg>
             </div>
         </div>

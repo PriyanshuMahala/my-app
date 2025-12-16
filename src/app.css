@@ -64,7 +64,9 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Material Design Utilities */

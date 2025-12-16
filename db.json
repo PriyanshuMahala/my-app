@@ -34,15 +34,11 @@
   "wishlists": [
     {
       "userId": "e31ada4d-9ca4-4dbd-8223-cfae813ad869",
-      "museumIds": [
-        3
-      ]
+      "museumIds": [3]
     },
     {
       "userId": "d57e8428-a8fc-45c2-b5e5-325d334022d7",
-      "museumIds": [
-        3
-      ]
+      "museumIds": [3]
     }
   ]
 }
